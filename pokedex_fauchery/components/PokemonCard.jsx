@@ -14,9 +14,17 @@ const PokemonCard = ({ pokemon, onClick }) => {
         <p className="text-sm text-textSecondary">
           Pokedex ID: {pokemon.pokedexId}
         </p>
-        <p className="text-sm text-textSecondary">
-          Generation: {pokemon.generation}
-        </p>
+        <div className="text-sm text-textSecondary flex justify-center gap-2">
+          {pokemon.types.map((type) => (
+            <p key={type.name} className="py-1">
+              <img
+                src={type.image}
+                alt={type.name}
+                className="mx-auto h-8 w-8 object-contain"
+              />
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
