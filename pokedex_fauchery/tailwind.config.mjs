@@ -1,15 +1,17 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+module.exports = {
+  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#4CAF50", // Vert agréable
+        secondary: "#FF9800", // Orange doux
+        background: "#F9FAFB", // Gris clair
+        surface: "#FFFFFF", // Blanc pur
+        textPrimary: "#333333", // Noir doux
+        textSecondary: "#666666", // Gris moyen
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
       },
     },
   },
